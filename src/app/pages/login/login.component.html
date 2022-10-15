@@ -1,0 +1,57 @@
+<div class="w-full h-screen">
+  <div
+    class="hidden md:inline-block w-2/5 bg-primary h-full bg-cover bg-center float-left"
+    style="background-image: url(../../../assets/login_background_image.jpg)"
+  ></div>
+  <div class="w-full h-full md:w-3/5 inline-block float-right">
+    <button class="fixed btn btn-circle btn-primary mt-5 right-5">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="ionicon"
+        viewBox="0 0 512 512"
+        width="30"
+        height="30"
+      >
+        <title>Help</title>
+        <path
+          d="M160 164s1.44-33 33.54-59.46C212.6 88.83 235.49 84.28 256 84c18.73-.23 35.47 2.94 45.48 7.82C318.59 100.2 352 120.6 352 164c0 45.67-29.18 66.37-62.35 89.18S248 298.36 248 324"
+          fill="none"
+          stroke="white"
+          stroke-linecap="round"
+          stroke-miterlimit="10"
+          stroke-width="40"
+        />
+        <circle cx="248" cy="399.99" r="32" fill="white" />
+      </svg>
+    </button>
+    <div class="w-full h-full flex justify-center items-center">
+      <div class="card max-w-sm shadow-xl bg-base-100">
+        <div class="card-body p-10">
+          <div class="form-control">
+            <h1 class="text-xl font-bold mb-3">Wilkommen!</h1>
+            <label class="label">
+              <span class="label-text">E-Mail</span>
+            </label>
+            <input type="text" class="input input-sm input-bordered" />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Passwort</span>
+            </label>
+            <input type="text" class="input input-sm input-bordered" />
+          </div>
+          <label class="label">
+            <a href="#" class="label-text-alt link link-hover"
+              >Passwort vergessen?</a
+            >
+          </label>
+          <div class="form-control mt-4">
+            <button [routerLink]="'/dashboard'" class="btn btn-primary">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

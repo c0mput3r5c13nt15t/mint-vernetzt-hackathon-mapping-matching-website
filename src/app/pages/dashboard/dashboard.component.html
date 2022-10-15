@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<app-dashboard-hero></app-dashboard-hero>
+<div class="w-2/3 max-w-5xl m-auto mt-10 mb-20">
+  <div>
+    <h1 class="text-3xl ml-0 mt-10 text-primary font-bold m-10 text-left">
+      Entdecke weitere spannende Projekte!
+    </h1>
+  </div>
+  <div class="grid grid-cold-1 md:grid-cols-2 gap-6">
+    <div
+      *ngFor="let i of [].constructor(10)"
+      class="inline-block w-full justify-center"
+    >
+      <app-project-card></app-project-card>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

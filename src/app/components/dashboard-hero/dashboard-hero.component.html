@@ -1,0 +1,97 @@
+<div class="hero h-[70vh] bg-gray-50 mt-10">
+  <div
+    (click)="generateNewProject()"
+    class="absolute left-5 top-[35vh] cursor-pointer"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="ionicon"
+      viewBox="0 0 512 512"
+      class="w-10 h-10"
+    >
+      <title>Chevron Back</title>
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="48"
+        d="M328 112L184 256l144 144"
+      />
+    </svg>
+  </div>
+  <div class="absolute right-5 top-[35vh] cursor-pointer">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="ionicon"
+      viewBox="0 0 512 512"
+      class="w-10 h-10"
+      (click)="generateNewProject()"
+    >
+      <title>Chevron Forward</title>
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="48"
+        d="M184 112l144 144-144 144"
+      />
+    </svg>
+  </div>
+  <div class="hero-content w-2/3 max-w-5xl flex-col px-0">
+    <h1 class="text-md font-bold float-left w-full mb-0 pl-4 text-primary">
+      Das könnte dir gefallen
+    </h1>
+    <div class="w-full max-w-5xl">
+      <img [src]="image" class="w-full rounded-lg shadow-2xl object-cover" />
+    </div>
+    <div class="max-w-5xl">
+      <h1 class="text-5xl font-bold flex items-center">
+        {{ title }}
+        <div *ngIf="isNew" class="ml-2 badge badge-lg badge-secondary">Neu</div>
+      </h1>
+      <p class="pt-5">
+        {{ description }}
+      </p>
+    </div>
+    <div class="w-full flex justify-between items-center h-10">
+      <div class="rating rating-sm justify-start">
+        <input type="radio" name="rating-9" class="rating-hidden" />
+        <input
+          type="radio"
+          name="rating-2"
+          class="mask mask-star-2 bg-primary"
+        />
+        <input
+          type="radio"
+          name="rating-2"
+          class="mask mask-star-2 bg-primary"
+        />
+        <input
+          type="radio"
+          name="rating-2"
+          class="mask mask-star-2 bg-primary"
+        />
+        <input
+          type="radio"
+          name="rating-2"
+          class="mask mask-star-2 bg-primary"
+        />
+        <input
+          type="radio"
+          name="rating-2"
+          class="mask mask-star-2 bg-primary"
+        />
+      </div>
+      <div>
+        <div
+          *ngFor="let category of randomCategories"
+          class="badge badge-outline ml-2"
+        >
+          {{ category }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

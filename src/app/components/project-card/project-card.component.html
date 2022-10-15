@@ -1,0 +1,58 @@
+<div class="hover:scale-[1.02] transition -mt-14 cursor-pointer">
+  <div class="avatar translate-y-3/4 z-10 pl-8">
+    <div class="w-20 rounded-xl">
+      <img [src]="image" />
+    </div>
+  </div>
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body">
+      <h2 class="card-title mt-10">
+        {{ title }}
+        <div *ngIf="isNew" class="badge badge-secondary">Neu</div>
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolorum et
+        nemo distinctio, alias inventore qui ut est quos quas excepturi adipisci
+        rerum deserunt, tenetur repellat facilis! Quis, debitis nisi?
+      </p>
+      <div class="card-actions justify-between items-center">
+        <div class="rating rating-sm justify-start">
+          <input type="radio" name="rating-9" class="rating-hidden" />
+          <input
+            type="radio"
+            name="rating-2"
+            class="mask mask-star-2 bg-primary"
+          />
+          <input
+            type="radio"
+            name="rating-2"
+            class="mask mask-star-2 bg-primary"
+          />
+          <input
+            type="radio"
+            name="rating-2"
+            class="mask mask-star-2 bg-primary"
+          />
+          <input
+            type="radio"
+            name="rating-2"
+            class="mask mask-star-2 bg-primary"
+          />
+          <input
+            type="radio"
+            name="rating-2"
+            class="mask mask-star-2 bg-primary"
+          />
+        </div>
+        <div>
+          <div
+            *ngFor="let category of randomCategories"
+            class="badge badge-outline ml-2"
+          >
+            {{ category }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
