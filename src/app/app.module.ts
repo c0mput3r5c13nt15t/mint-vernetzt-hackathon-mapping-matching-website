@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardHeroComponent } from './components/dashboard-hero/dashboard-hero.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DashboardHeroComponent } from './components/dashboard-hero/dashboard-he
     ProjectCardComponent,
     FooterComponent,
     DashboardHeroComponent,
+    AboutUsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
