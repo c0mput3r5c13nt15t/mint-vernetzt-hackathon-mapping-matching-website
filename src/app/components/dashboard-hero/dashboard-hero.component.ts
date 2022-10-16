@@ -9,7 +9,7 @@ import { faker } from '@faker-js/faker';
 export class DashboardHeroComponent implements OnInit {
   image = faker.image.image(1000, 200, true);
   title = faker.lorem.sentence(Math.floor(Math.random() * 4) + 1).slice(0, -1);
-  description = faker.lorem.paragraphs(2);
+  description = faker.lorem.paragraphs(6);
   categaries = [
     'Projekt',
     'Veranstaltung',
@@ -20,14 +20,17 @@ export class DashboardHeroComponent implements OnInit {
     'Grundschule',
     'Gymnasium',
     'Realschule',
+    'Digital',
+    'In deiner Nähe',
   ];
   randomCategories = this.getRandomCategories();
   getRandomCategories() {
     let randomCategories = [];
-    for (let i = 0; i < Math.floor(Math.random() * 4); i++) {
+    for (let i = 0; i < Math.floor(Math.random() * 5); i++) {
       let randomIndex = Math.floor(Math.random() * this.categaries.length);
       randomCategories.push(this.categaries[randomIndex]);
     }
+    randomCategories = [...new Set(randomCategories)];
     return randomCategories;
   }
   isNew = Math.floor(Math.random() * 10) < 3;

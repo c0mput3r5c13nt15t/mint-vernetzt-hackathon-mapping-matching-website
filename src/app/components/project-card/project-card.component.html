@@ -10,12 +10,10 @@
         {{ title }}
         <div *ngIf="isNew" class="badge badge-secondary">Neu</div>
       </h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolorum et
-        nemo distinctio, alias inventore qui ut est quos quas excepturi adipisci
-        rerum deserunt, tenetur repellat facilis! Quis, debitis nisi?
+      <p class="line-clamp-4 h-24">
+        {{ description }}
       </p>
-      <div class="card-actions justify-between items-center">
+      <div class="card-actions justify-between items-center h-10">
         <div class="rating rating-sm justify-start">
           <input type="radio" name="rating-9" class="rating-hidden" />
           <input
